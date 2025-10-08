@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>{{ contact.name }}</title></head>
+<body>
+  <h2>{{ contact.name }}</h2>
+  <p>Email: {{ contact.email }}</p>
+  <p>Phone: {{ contact.tel_number }}</p>
+  <p>Profession: {{ contact.profession }}</p>
+  <p>Address: {{ contact.address }}</p>
+
+  <a href="{% url 'contacts-update' contact.pk %}">Edit</a>
+  <a href="{% url 'contacts-delete' contact.pk %}">Delete</a>
+  <br><br>
+  <a href="{% url 'contacts-list' %}">Back to list</a>
+</body>
+</html>
